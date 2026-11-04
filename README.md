@@ -28,10 +28,12 @@ Moreover, Anchor(s) should be manually controlled to change between scan phase a
 
 ## DS-TWR (Planned)
 
+Letting anchor be the observer
+
 1) POLL_REQ; Sent by anchor, receiving with immediate POLL
-2) POLL; Sent by tag
-3) POLLACK; Sent by anchor
-4) RANGE; Sent by tag
+2) POLL; Sent by tag `t2`
+3) POLLACK; Sent by anchor `t3` , standard compliant will have here know `t1` `t4` wasteful
+4) RANGE; Sent by tag `t6` with added `t1` `t4` `t5`
 5) WAIT_REQ; Sent by anchor
 
 ctrlAs_forgetT : multiple tags, multiple anchors, reliant on anchors,
